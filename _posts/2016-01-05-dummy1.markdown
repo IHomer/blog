@@ -1,10 +1,12 @@
 ---
 layout: post
-title:  "Welcome to the IHomer blog"
+title:  "Dummy 1"
 aside: "<img src='/temp_stock_photos/6UHHE19YG7.jpg'/>"
-date:   2016-01-04 15:49:57
+date:   2016-01-05 15:49:57
 categories: update ihomer
 type: "Blog update"
 author: Xander Verheij
 ---
-The first dummy post, check back soon to find some techy goodness.
+<p>
+    The first dummy post, check back soon to find some techy goodness.
+</p>

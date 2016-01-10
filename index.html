@@ -1,23 +1,25 @@
 ---
 layout: default
+title:  "Overview"
+aside: "<img src='/temp_stock_photos/6UHHE19YG7.jpg'/>"
 ---
 
 <div class="home">
+  <article>
+    <ul class="post-list">
+      {% for post in site.posts %}
+        <li>
 
-  <h1 class="page-heading">Posts</h1>
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <div>{{ post.content |truncatehtml | truncatewords: 100 }}</div>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">Read more...</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </article>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
